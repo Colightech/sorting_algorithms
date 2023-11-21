@@ -25,5 +25,8 @@ void quick_sort(int *array, size_t size);
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void shell_sort(int *array, size_t size);
+void swap_swap_forward(listint_t **list, listint_t **low, listint_t **curr);
+void swap_backward(listint_t **list, listint_t **low, listint_t **curr);
+void cocktail_sort_list(listint_t **list);
 
 #endif
