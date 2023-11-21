@@ -7,7 +7,7 @@
  * @nd2: node two
  * Return: void
  */
-void swap(listint_t **h, listint_t **nd1, listint_t *nd2)
+void swap_node(listint_t **h, listint_t **nd1, listint_t *nd2)
 {
 	(*nd1)->next = nd2->next;
 
@@ -43,7 +43,7 @@ void insertion_sort_list(listint_t **list)
 
 		while (copy != NULL && copy->n > curr->n)
 		{
-			swap(list, &copy, curr);
+			swap_node(list, &copy, curr);
 			print_list((const listint_t *)*list);
 		}
 	}

@@ -6,7 +6,7 @@
  * @b: second element to swap
  * Return: void
  */
-void array_swap(int *a, int *b)
+void swap(int *a, int *b)
 {
 	int temp;
 
@@ -35,7 +35,7 @@ int lomuto_partition(int *array, size_t size, int low, int high)
 		{
 			if (end < start)
 			{
-				array_swap(array + start, array + end);
+				swap(array + start, array + end);
 				print_array(array, size);
 			}
 			end++;
@@ -43,7 +43,7 @@ int lomuto_partition(int *array, size_t size, int low, int high)
 	}
 	if (array[end] > *pivot)
 	{
-		array_swap(array + end, pivot);
+		swap(array + end, pivot);
 		print_array(array, size);
 	}
 	return (end);
