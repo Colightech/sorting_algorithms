@@ -6,7 +6,7 @@
  * @b: element B
  * Return: void
  */
-void swap(int *a, int *b)
+void array_swap(int *a, int *b)
 {
 	int temp;
 
@@ -37,7 +37,7 @@ void selection_sort(int *array, size_t size)
 		}
 		if (array + i != least)
 		{
-			swap(array + i, least);
+			array_swap(array + i, least);
 			print_array(array, size);
 		}
 	}
