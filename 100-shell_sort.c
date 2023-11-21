@@ -1,6 +1,20 @@
 #include "sort.h"
 
 /**
+ * swap_ele - this function swap two element in an array
+ * @a: first element
+ * @b: second element
+ * Return: void
+ */
+void swap_ele(int *a, int *b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+/**
  * shell_sort - a function that sorts an array of integers
  * in ascending order using the Shell sort algorithm,
  * using the Knuth sequence
@@ -9,7 +23,6 @@
  */
 void shell_sort(int *array, size_t size)
 {
-	int temp;
 	size_t i, j, h = 1;
 
 	while (h < (size / 3))
@@ -21,14 +34,12 @@ void shell_sort(int *array, size_t size)
 	{
 		for (i = h; i < size; i++)
 		{
-			temp = array[i];
 			j = i;
-			while (j >= h && array[j - h] > temp)
+			while (j >= h && array[j - h] > array[j])
 			{
-				array[j] = array[j - h];
+				swap_ele(array + j, array + (j - h));
 				j = j - h;
 			}
-			array[j] = temp;
 		}
 		print_array(array, size);
 	}
