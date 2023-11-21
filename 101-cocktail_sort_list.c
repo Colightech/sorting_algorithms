@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap_node_ahead - Swap a node in a listint_t doubly-linked list
+ * swap_forward - Swap a node in a listint_t doubly-linked list
  * list of integers with the node ahead of it.
  * @list: A pointer to the head of a doubly-linked list.
  * @low: A pointer to the tail.
@@ -27,7 +27,7 @@ void swap_forward(listint_t **list, listint_t **low, listint_t **curr)
 }
 
 /**
- * swap_node_behind - Swap a node in a listint_t doubly-linked
+ * swap_backward - Swap a node in a listint_t doubly-linked
  * list of integers with the node behind it.
  * @list: A pointer to the head of a doubly-linked list of integers.
  * @low: A pointer to the tail.

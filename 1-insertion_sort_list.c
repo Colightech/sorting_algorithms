@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * swap - a function that swap 2 node in listint_t doubly-linked list.
+ * swap_node - a function that swap 2 node in listint_t doubly-linked list.
  * @h: head node pointer
  * @nd1: node one
  * @nd2: node two
@@ -39,7 +39,6 @@ void insertion_sort_list(listint_t **list)
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
-	
 	for (curr = (*list)->next; curr != NULL; curr = curr->next)
 	{
 		copy = curr->prev;
